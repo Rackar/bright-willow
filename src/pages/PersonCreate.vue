@@ -185,7 +185,7 @@ export default {
       this.$axios.post("/api/person", person).then(res => {
         console.log(res);
         if (res.status == 200 && res.data.status == 1) {
-          this.$router.back();
+          this.$router.push("/list");
         } else {
           this.$toast.fail("保存出现问题，请重试");
         }

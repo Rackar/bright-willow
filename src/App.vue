@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <mainPage />
   </div>
 </template>
-
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+import mainPage from "./components/main.vue";
+@Component({
+  components: {
+    mainPage
+  }
+})
+export default class App extends Vue {
+  // @Prop() private msg!: string;
+  created() {
+    let token: string = window.localStorage.token;
+    if (token) this.$store.commit("login_saveToken", token);
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

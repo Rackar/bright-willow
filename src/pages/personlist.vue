@@ -68,7 +68,8 @@ export default {
             this.myList = res.data.data;
           })
           .catch(err => {
-            this.$toast("获取数据错误" + err);
+            this.$toast("未登录");
+            this.$router.push("/login");
           });
         this.$axios
           .get("/api/person/getlikings/" + id)
@@ -77,7 +78,7 @@ export default {
             this.favoriteList = res.data.data;
           })
           .catch(err => {
-            this.$toast("获取数据错误" + err);
+            // this.$toast("未登录");
           });
       }
     }
