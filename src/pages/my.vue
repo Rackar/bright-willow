@@ -10,7 +10,7 @@
       <van-button icon="star-o" type="primary" @click="personCreate">
         管理人物
       </van-button>
-    </div> -->
+    </div>-->
     <div>
       <van-button icon="star-o" type="primary" @click="personCreate">
         个人信息
@@ -21,7 +21,8 @@
         好友
       </van-button>
     </div>
-    <personlist listApiUrl="/api/person/getlikings/" listName="我的收藏" />
+    <personlist listApiUrl="/api/person/user" listName="我创建的" />
+    <personlist listApiUrl="/api/person/getlikings" listName="我的收藏" />
   </div>
 </template>
 

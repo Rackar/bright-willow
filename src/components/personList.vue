@@ -57,14 +57,14 @@ export default {
         // };
         this.$axios
           // .get("/api/person/user/" + id, data)
-          .get(this.listApiUrl + userid)
+          .post(this.listApiUrl)
           .then(res => {
             console.log(res);
             this.myList = res.data.data;
           })
           .catch(err => {
-            this.$toast("请登录");
-            this.$router.push("/login");
+            // this.$toast("请登录");
+            // this.$router.push("/login");
           });
       }
     }

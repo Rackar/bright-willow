@@ -14,7 +14,7 @@ Vue.use(Vant);
 // Vue.use(Lazyload, lazyOption);
 Vue.use(Lazyload);
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3000/";
+axios.defaults.baseURL = "http://localhost:3006/";
 // var token = window.localStorage.getItem("token");
 //请求拦截。所有http请求增加token
 axios.interceptors.request.use(
@@ -55,7 +55,7 @@ axios.interceptors.response.use(
 );
 
 Vue.prototype.$axios = axios;
-Vue.prototype.$imgServer = "http://localhost:3000/";
+Vue.prototype.$imgServer = "http://localhost:3006/";
 Vue.config.productionTip = false;
 
 router.beforeResolve((to, from, next) => {
