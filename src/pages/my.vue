@@ -1,16 +1,16 @@
 <template>
   <div class="my">
     <h3>个人中心</h3>
-    <div>
+    <!-- <div>
       <van-button icon="star-o" type="primary" @click="personCreate">
-        新增人物
+        新建人物
       </van-button>
     </div>
     <div>
       <van-button icon="star-o" type="primary" @click="personCreate">
         管理人物
       </van-button>
-    </div>
+    </div> -->
     <div>
       <van-button icon="star-o" type="primary" @click="personCreate">
         个人信息
@@ -21,11 +21,16 @@
         好友
       </van-button>
     </div>
+    <personlist listApiUrl="/api/person/getlikings/" listName="我的收藏" />
   </div>
 </template>
 
 <script>
+import personlist from "../components/personList";
 export default {
+  components: {
+    personlist
+  },
   methods: {
     personCreate() {
       this.$router.push("/personCreate");

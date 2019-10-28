@@ -1,21 +1,21 @@
 <template>
   <div class="article">
-    <navBarTop title="文章" />
+    <van-nav-bar
+      title="文章"
+      left-text="返回"
+      left-arrow
+      @click-left="onClickLeft"
+    />
     <h3>{{ article.title }}</h3>
     <div class="text">
       <pre class="intext">{{ article.text }}</pre>
     </div>
-
-    <!-- <div>前一篇 下一篇</div> -->
   </div>
 </template>
 
 <script>
-import navBarTop from "../components/navBarTop";
 export default {
-  components: {
-    navBarTop
-  },
+  components: {},
   props: {
     id: {
       type: String,
@@ -37,6 +37,9 @@ export default {
       if (article) {
         this.article = article;
       }
+    },
+    onClickLeft() {
+      this.$router.back();
     }
   }
 };

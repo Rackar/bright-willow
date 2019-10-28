@@ -1,6 +1,12 @@
 <template>
   <div>
-    <h3>新建人物</h3>
+    <van-nav-bar
+      title="编辑"
+      left-text="返回"
+      left-arrow
+      @click-left="onClickLeft"
+    />
+    <h3>编辑人物资料</h3>
     <van-cell-group>
       <van-field
         v-model="name"
@@ -65,7 +71,7 @@
       </van-popup>
     </van-cell-group>
     <div>
-      <div>上传相片:</div>
+      <div>上传头像:</div>
       <van-uploader
         v-model="fileList"
         :max-count="1"
@@ -146,6 +152,10 @@ export default {
       }
 
       return true;
+    },
+    onClickLeft() {
+      // this.$toast("返回");
+      this.$router.push("/list");
     },
     avatar_upload(file) {
       console.log(file);

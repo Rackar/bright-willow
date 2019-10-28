@@ -1,9 +1,9 @@
 <template>
   <div class="homepage">
     <div>
-      <h2>明柳之心</h2>
-      <div class="subtitle">死亡不是永别，忘记才是</div>
-      <div class="subtitle">为那些最珍贵的人做纪念</div>
+      <h2>明 柳</h2>
+      <div class="subtitle">死亡不是永别，忘记才是。</div>
+      <div class="subtitle">为那些最珍贵的人做个纪念</div>
 
       <div class="button-group" v-if="!logined">
         <van-button
@@ -56,20 +56,24 @@ export default {
 
 <style lang="scss" scoped>
 .homepage {
-  background-image: url("/img/bg2.jpg");
+  background-image: url("/img/bg_home.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position-y: 100%;
+  // background-position-y: 100%;
   // filter: blur(2px);
 
   background-color: aliceblue;
   height: 92vh;
   h2 {
-    margin: 0 0 80px 0;
-    padding-top: 160px;
+    margin: 0 0 60px 0;
+    padding-top: 140px;
+    font-family: cursive;
+    font-size: xx-large;
   }
   .subtitle {
-    margin: 40px 0 0 0;
+    margin: 30px 0 0 0;
+    font-family: cursive;
+    font-size: x-large;
   }
   .button-group {
     margin: 40px 0 0 0;

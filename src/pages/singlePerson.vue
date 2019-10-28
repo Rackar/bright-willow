@@ -244,15 +244,15 @@ export default {
 .bg {
   position: absolute;
   width: 100%;
-  height: 60%;
+  height: 580px;
   top: 46px;
   left: 0;
   z-index: -1;
-  background-image: url("/img/bg4.jpg");
+  background-image: url("/img/bg_single.png");
   background-size: 100%;
   background-repeat: no-repeat;
   /* background-position-y: 100%; */
-  filter: blur(1px);
+  filter: blur(2px);
 }
 .single div.info {
   margin: 5px 25px;

@@ -67,7 +67,7 @@
       </van-popup>
     </van-cell-group>
     <div>
-      <div>上传相片:</div>
+      <div>上传头像:</div>
       <van-uploader
         v-model="fileList"
         :max-count="1"
