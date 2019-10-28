@@ -3,9 +3,7 @@
     <navBarTop title="文章" />
     <h3>{{ article.title }}</h3>
     <div class="text">
-      <pre style="white-space: pre-wrap; text-align:left;padding:16px;">{{
-        article.text
-      }}</pre>
+      <pre class="intext">{{ article.text }}</pre>
     </div>
 
     <!-- <div>前一篇 下一篇</div> -->
@@ -45,16 +43,23 @@ export default {
 </script>
 
 <style scoped>
-.article {
-  background-image: url("/img/paper.jpg");
-  background-size: 100%;
-  background-repeat: repeat-y;
-}
 .text {
-  padding: 12px 40px 0 40px;
-  line-height: 23px;
-  width: 80%;
+  padding: 0px 40px 0 40px;
+
   overflow: auto;
   white-space: pre-wrap;
+}
+.intext {
+  white-space: pre-wrap;
+  text-align: left;
+  padding: 0 14px;
+  line-height: 24px;
+  background-image: repeating-linear-gradient(
+    180deg,
+    white 0,
+    rgb(252, 255, 247) 23px,
+    black 23px,
+    black 24px
+  );
 }
 </style>
