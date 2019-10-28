@@ -13,7 +13,13 @@
 
       <van-field v-model="title" placeholder="请输入标题" />
       <div>正文</div>
-      <van-field v-model="text" type="textarea" placeholder="请输入文章" rows="15" autosize />
+      <van-field
+        v-model="text"
+        type="textarea"
+        placeholder="请输入文章"
+        rows="15"
+        autosize
+      />
       <van-button type="primary" @click="saveArticle">保存</van-button>
     </van-cell-group>
   </div>
@@ -60,5 +66,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

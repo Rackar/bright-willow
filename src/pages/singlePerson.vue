@@ -9,23 +9,39 @@
       @click-right="onClickRight()"
     />
 
-    <van-action-sheet v-model="actionShow" :actions="actions" @select="onSelect" />
+    <van-action-sheet
+      v-model="actionShow"
+      :actions="actions"
+      @select="onSelect"
+    />
     <div>
-      <van-image round width="10rem" height="10rem" :src="avatarUrl" v-show="avatarUrl" />
+      <van-image
+        round
+        width="10rem"
+        height="10rem"
+        :src="avatarUrl"
+        v-show="avatarUrl"
+      />
     </div>
     <div class="bg"></div>
-    <h3>{{userinfo.name}}</h3>
-    <div class="year">( {{userinfo.birthday}} - {{userinfo.deathday}} )</div>
-    <div class="info">{{userinfo.info}}</div>
+    <h3>{{ userinfo.name }}</h3>
+    <div class="year">
+      ( {{ userinfo.birthday }} - {{ userinfo.deathday }} )
+    </div>
+    <div class="info">{{ userinfo.info }}</div>
 
     <div>
       <van-divider content-position="center">文章</van-divider>
-      <span v-show="articles.length==0" @click="onSelect({option:'article'})">尚未添加文章</span>
+      <span
+        v-show="articles.length == 0"
+        @click="onSelect({ option: 'article' })"
+        >尚未添加文章</span
+      >
       <van-cell
         v-for="item in articles"
         :key="item._id"
         :title="item.title"
-        :to="'/article/'+item._id"
+        :to="'/article/' + item._id"
         :value="item.value"
       />
     </div>
@@ -46,9 +62,9 @@
       @change="onChange"
     >
       <template v-slot:index>
-        <div>第{{ index+1 }}张</div>
-        <div>{{imagesRawData[index].title}}</div>
-        <span class="bottom slot">{{imageInfo}}</span>
+        <div>第{{ index + 1 }}张</div>
+        <div>{{ imagesRawData[index].title }}</div>
+        <span class="bottom slot">{{ imageInfo }}</span>
       </template>
     </van-image-preview>
   </div>
@@ -222,7 +238,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .bg {
   position: absolute;
   width: 100%;

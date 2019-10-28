@@ -1,6 +1,11 @@
 <template>
   <div>
-    <van-nav-bar title="上传图片" left-text="返回" left-arrow @click-left="$router.back()" />
+    <van-nav-bar
+      title="上传图片"
+      left-text="返回"
+      left-arrow
+      @click-left="$router.back()"
+    />
     <div style="height:350px;width:80%;margin:10px auto">
       <h2 style="margin-bottom:100px;">上传相片:</h2>
       <van-uploader
@@ -99,5 +104,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

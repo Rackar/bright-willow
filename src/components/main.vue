@@ -7,9 +7,15 @@
     </div>
 
     <van-tabbar v-model="active" class="dilan">
-      <van-tabbar-item name="home" icon="home-o" replace to="/home">首页</van-tabbar-item>
-      <van-tabbar-item name="list" icon="search" replace to="/list">收藏列表</van-tabbar-item>
-      <van-tabbar-item name="my" icon="friends-o" replace to="/my">我的</van-tabbar-item>
+      <van-tabbar-item name="home" icon="home-o" replace to="/home"
+        >首页</van-tabbar-item
+      >
+      <van-tabbar-item name="list" icon="search" replace to="/list"
+        >收藏列表</van-tabbar-item
+      >
+      <van-tabbar-item name="my" icon="friends-o" replace to="/my"
+        >我的</van-tabbar-item
+      >
     </van-tabbar>
   </div>
 </template>

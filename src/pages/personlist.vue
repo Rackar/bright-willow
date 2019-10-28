@@ -8,8 +8,14 @@
         :text="value.name"
         @click="jumpToSingle(value._id)"
       >
-        <van-image :src="value&&value.avatarfilePath?$imgServer+value.avatarfilePath:''" />
-        <div>{{value.name}}</div>
+        <van-image
+          :src="
+            value && value.avatarfilePath
+              ? $imgServer + value.avatarfilePath
+              : ''
+          "
+        />
+        <div>{{ value.name }}</div>
       </van-grid-item>
     </van-grid>
     <van-divider content-position="left">我的收藏</van-divider>
@@ -20,8 +26,14 @@
         :text="value.name"
         @click="jumpToSingle(value._id)"
       >
-        <van-image :src="value&&value.avatarfilePath?$imgServer+value.avatarfilePath:''" />
-        <div>{{value.name}}</div>
+        <van-image
+          :src="
+            value && value.avatarfilePath
+              ? $imgServer + value.avatarfilePath
+              : ''
+          "
+        />
+        <div>{{ value.name }}</div>
       </van-grid-item>
     </van-grid>
   </div>
@@ -76,5 +88,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

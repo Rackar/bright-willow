@@ -1,9 +1,11 @@
 <template>
   <div class="article">
     <navBarTop title="文章" />
-    <h3>{{article.title}}</h3>
+    <h3>{{ article.title }}</h3>
     <div class="text">
-      <pre style="white-space: pre-wrap; text-align:left;padding:16px;">{{article.text}}</pre>
+      <pre style="white-space: pre-wrap; text-align:left;padding:16px;">{{
+        article.text
+      }}</pre>
     </div>
 
     <!-- <div>前一篇 下一篇</div> -->
@@ -42,7 +44,7 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style scoped>
 .article {
   background-image: url("/img/paper.jpg");
   background-size: 100%;

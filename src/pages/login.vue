@@ -3,13 +3,32 @@
     <h2 style="text-align:center">登录</h2>
     <van-cell-group>
       <!-- <van-field v-model="form.user_name" label="用户名" placeholder="请输入用户名" required /> -->
-      <van-field v-model="form.mobile" label="手机号" placeholder="请输入手机号" required />
-      <van-field v-model="form.password" type="password" label="密码" placeholder="请输入密码" required />
+      <van-field
+        v-model="form.mobile"
+        label="手机号"
+        placeholder="请输入手机号"
+        required
+      />
+      <van-field
+        v-model="form.password"
+        type="password"
+        label="密码"
+        placeholder="请输入密码"
+        required
+      />
     </van-cell-group>
     <van-button @click="onSubmit">登录</van-button>
-    <van-button @click="$router.push('/signup')" style="margin-left:20px;">注册</van-button>
+    <van-button @click="$router.push('/signup')" style="margin-left:20px;"
+      >注册</van-button
+    >
     <van-overlay :show="loading" style="z-index:3;" class-name="myover">
-      <van-loading type="spinner" color="#1989fa" vertical style="margin-top:100px;">加载中...</van-loading>
+      <van-loading
+        type="spinner"
+        color="#1989fa"
+        vertical
+        style="margin-top:100px;"
+        >加载中...</van-loading
+      >
     </van-overlay>
   </div>
 </template>
@@ -85,7 +104,7 @@ export default {
   }
 };
 </script>
-<style >
+<style>
 .myover {
   z-index: 3 !important;
   background-color: rgba(128, 128, 128, 0.3);

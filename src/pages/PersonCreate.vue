@@ -18,7 +18,13 @@
         @blur="yearRule(birthday)"
         placeholder="输入格式：1950.05"
       >
-        <van-button slot="button" @click="openPickDay('birth')" size="small" type="primary">年月选择</van-button>
+        <van-button
+          slot="button"
+          @click="openPickDay('birth')"
+          size="small"
+          type="primary"
+          >年月选择</van-button
+        >
       </van-field>
       <van-field
         v-model="deathday"
@@ -28,10 +34,23 @@
         @blur="yearRule(deathday)"
         placeholder="健在留空或2000.05"
       >
-        <van-button slot="button" @click="openPickDay('death')" size="small" type="primary">年月选择</van-button>
+        <van-button
+          slot="button"
+          @click="openPickDay('death')"
+          size="small"
+          type="primary"
+          >年月选择</van-button
+        >
       </van-field>
 
-      <van-field v-model="info" label="生平" type="textarea" placeholder="请输入" rows="5" autosize />
+      <van-field
+        v-model="info"
+        label="生平"
+        type="textarea"
+        placeholder="请输入"
+        rows="5"
+        autosize
+      />
 
       <van-popup v-model="show" position="bottom" :style="{ height: '40%' }">
         <van-datetime-picker
@@ -181,5 +200,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
