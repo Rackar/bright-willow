@@ -6,22 +6,34 @@
       <div class="subtitle">为那些最珍贵的人做纪念</div>
 
       <div class="button-group" v-if="!logined">
-        <van-button icon="star-o" type="primary" @click="$router.push('/signup')">注册</van-button>
+        <van-button
+          icon="star-o"
+          type="primary"
+          @click="$router.push('/signup')"
+        >
+          注册
+        </van-button>
         <van-button
           icon="star-o"
           type="info"
           @click="$router.push('/login')"
           style="margin-left:30px;"
-        >登录</van-button>
+        >
+          登录
+        </van-button>
       </div>
       <div class="button-group" v-if="logined">
-        <van-button icon="star-o" type="primary" @click="personCreate">新建人物</van-button>
+        <van-button icon="star-o" type="primary" @click="personCreate">
+          新建人物
+        </van-button>
         <van-button
           icon="star-o"
           type="warning"
           @click="$store.commit('logout_delToken')"
           style="margin-left:30px;"
-        >注销</van-button>
+        >
+          注销
+        </van-button>
       </div>
     </div>
   </div>

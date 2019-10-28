@@ -18,17 +18,18 @@
       />
     </van-cell-group>
     <van-button @click="onSubmit">登录</van-button>
-    <van-button @click="$router.push('/signup')" style="margin-left:20px;"
-      >注册</van-button
-    >
+    <van-button @click="$router.push('/signup')" style="margin-left:20px;">
+      注册
+    </van-button>
     <van-overlay :show="loading" style="z-index:3;" class-name="myover">
       <van-loading
         type="spinner"
         color="#1989fa"
         vertical
         style="margin-top:100px;"
-        >加载中...</van-loading
       >
+        加载中...
+      </van-loading>
     </van-overlay>
   </div>
 </template>

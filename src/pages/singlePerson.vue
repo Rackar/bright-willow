@@ -9,18 +9,35 @@
       @click-right="onClickRight()"
     />
 
-    <van-action-sheet v-model="actionShow" :actions="actions" @select="onSelect" />
+    <van-action-sheet
+      v-model="actionShow"
+      :actions="actions"
+      @select="onSelect"
+    />
     <div>
-      <van-image round width="10rem" height="10rem" :src="avatarUrl" v-show="avatarUrl" />
+      <van-image
+        round
+        width="10rem"
+        height="10rem"
+        :src="avatarUrl"
+        v-show="avatarUrl"
+      />
     </div>
     <div class="bg"></div>
     <h3>{{ userinfo.name }}</h3>
-    <div class="year">( {{ userinfo.birthday }} - {{ userinfo.deathday }} )</div>
+    <div class="year">
+      ( {{ userinfo.birthday }} - {{ userinfo.deathday }} )
+    </div>
     <div class="info">{{ userinfo.info }}</div>
 
     <div>
       <van-divider content-position="center">文章</van-divider>
-      <span v-show="articles.length == 0" @click="onSelect({ option: 'article' })">尚未添加文章</span>
+      <span
+        v-show="articles.length == 0"
+        @click="onSelect({ option: 'article' })"
+      >
+        尚未添加文章
+      </span>
       <van-cell
         v-for="item in articles"
         :key="item._id"

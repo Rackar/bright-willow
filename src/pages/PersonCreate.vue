@@ -23,8 +23,9 @@
           @click="openPickDay('birth')"
           size="small"
           type="primary"
-          >年月选择</van-button
         >
+          年月选择
+        </van-button>
       </van-field>
       <van-field
         v-model="deathday"
@@ -39,8 +40,9 @@
           @click="openPickDay('death')"
           size="small"
           type="primary"
-          >年月选择</van-button
         >
+          年月选择
+        </van-button>
       </van-field>
 
       <van-field
