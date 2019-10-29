@@ -32,9 +32,20 @@ export default {
     // singlePerson,
     // navBarTop
   },
+  computed: {
+    active: {
+      get: function() {
+        return this.$route.name;
+      },
+      // setter
+      set: function(newValue) {
+        //
+      }
+    }
+  },
   data() {
     return {
-      active: "home"
+      // active: "home"
     };
   }
 };
