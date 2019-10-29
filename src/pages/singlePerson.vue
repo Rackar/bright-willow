@@ -53,7 +53,7 @@
       width="45"
       radius="8"
       height="45"
-      src="/img/xiangce.png"
+      :src="require('../assets/xiangce.png')"
     />
     <van-image-preview
       v-model="show"
@@ -248,7 +248,7 @@ export default {
   top: 46px;
   left: 0;
   z-index: -1;
-  background-image: url("/img/bg_single.png");
+  background-image: url("../assets/bg_single.png");
   background-size: 100%;
   background-repeat: no-repeat;
   /* background-position-y: 100%; */

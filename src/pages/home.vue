@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .homepage {
-  background-image: url("/img/bg_home.jpg");
+  background-image: url("../assets/bg_home.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   // background-position-y: 100%;
