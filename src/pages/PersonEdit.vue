@@ -120,7 +120,7 @@ export default {
       this.$router.push("/login");
     } else {
       this.$axios
-        .get("/api/person/" + this.id)
+        .get("/noauth/person/" + this.id)
         .then(res => {
           console.log(res);
           this.$store.commit("setCurrentPerson", res.data.data);
