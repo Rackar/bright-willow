@@ -1,6 +1,6 @@
 <template>
   <div class="my">
-    <h3>个人中心</h3>
+    <!-- <h3>个人中心</h3> -->
     <!-- <div>
       <van-button icon="star-o" type="primary" @click="personCreate">
         新建人物
@@ -12,13 +12,11 @@
       </van-button>
     </div>-->
     <div>
-      <van-button icon="star-o" type="primary" @click="personCreate">
+      <van-button icon="user-o" type="primary">
         个人信息
       </van-button>
-    </div>
-    <div>
-      <van-button icon="star-o" type="primary" @click="personCreate">
-        好友
+      <van-button icon="friends-o" type="primary" style="margin-left:30px;">
+        搜索
       </van-button>
     </div>
     <personlist listApiUrl="/api/person/user" listName="我创建的" />

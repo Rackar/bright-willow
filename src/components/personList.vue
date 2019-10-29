@@ -2,6 +2,9 @@
   <div>
     <van-divider content-position="left">{{ listName }}</van-divider>
     <van-grid :gutter="10">
+      <span style="font-size:14px;" v-show="!(myList && myList.length)">
+        暂无
+      </span>
       <van-grid-item
         v-for="value in myList"
         :key="value._id"

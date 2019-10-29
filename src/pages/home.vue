@@ -3,18 +3,18 @@
     <div>
       <h2>明 柳</h2>
       <div class="subtitle">死亡不是永别，忘记才是。</div>
-      <div class="subtitle">为那些最珍贵的人做个纪念</div>
+      <div class="subtitle">记念那些最珍贵的人</div>
 
       <div class="button-group" v-if="!logined">
         <van-button
-          icon="star-o"
+          icon="friends-o"
           type="primary"
           @click="$router.push('/signup')"
         >
           注册
         </van-button>
         <van-button
-          icon="star-o"
+          icon="manager-o"
           type="info"
           @click="$router.push('/login')"
           style="margin-left:30px;"
@@ -27,7 +27,7 @@
           新建人物
         </van-button>
         <van-button
-          icon="star-o"
+          icon="close"
           type="warning"
           @click="$store.commit('logout_delToken')"
           style="margin-left:30px;"
