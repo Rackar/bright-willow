@@ -39,7 +39,8 @@ export default {
     listApiUrl: {
       type: String,
       default: ""
-    }
+    },
+    postBody: {}
   },
   data() {
     return {
@@ -60,7 +61,7 @@ export default {
         // };
         this.$axios
           // .get("/api/person/user/" + id, data)
-          .post(this.listApiUrl)
+          .post(this.listApiUrl, this.postBody)
           .then(res => {
             console.log(res);
             this.myList = res.data.data;

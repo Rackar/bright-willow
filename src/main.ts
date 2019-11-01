@@ -26,7 +26,6 @@ Vue.prototype.$imgServer =
 //请求拦截。所有http请求增加token
 axios.interceptors.request.use(
   config => {
-    console.log("req");
     config.headers = {
       "Content-Type": " application/json"
     };
@@ -43,29 +42,30 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   function(response) {
     // 用户信息是否超时，重定向到登录页面
-    if (response.status != 200) {
-      localStorage.clear();
-      router.replace({
-        path: "/login",
-        query: {
-          redirect: router.currentRoute.fullPath
-        }
-      });
-      Vant.Toast("请登录后操作");
-    }
+    console.log(response);
+    // if (response.status != 200) {
+    //   localStorage.clear();
+    //   router.replace({
+    //     path: "/login",
+    //     query: {
+    //       redirect: router.currentRoute.fullPath
+    //     }
+    //   });
+    //   Vant.Toast("请登录后操作");
+    // }
     return response;
   },
   function(error) {
-    console.log("res error");
+    console.log("res error", error);
     // Do something with response error
-    Vant.Toast("请登录后操作");
-    localStorage.clear();
-    router.replace({
-      path: "/login",
-      query: {
-        redirect: router.currentRoute.fullPath
-      }
-    });
+    store.commit("logout_delToken");
+    router.replace({ name: "login" });
+    // router.replace({
+    //   path: "/login",
+    //   query: {
+    //     redirect: router.currentRoute.fullPath
+    //   }
+    // });
 
     return Promise.reject(error);
   }
