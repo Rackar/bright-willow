@@ -127,7 +127,7 @@ export default {
       };
 
       let data = new FormData();
-      data.append("avatar", file.file);
+      data.append("file", file.file);
       let config = {
         headers: {
           "Content-Type": "multipart/form-data"
