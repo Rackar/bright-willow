@@ -16,11 +16,11 @@ Vue.use(Lazyload);
 import axios from "axios";
 axios.defaults.baseURL =
   process.env.NODE_ENV === "production"
-    ? "http://123.206.94.184:3006/"
+    ? "https://mingliu.codingyang.com/api/"
     : "http://localhost:3006/";
 Vue.prototype.$imgServer =
   process.env.NODE_ENV === "production"
-    ? "http://123.206.94.184:3006/"
+    ? "https://mingliu.codingyang.com/api/"
     : "http://localhost:3006/";
 // var token = window.localStorage.getItem("token");
 //请求拦截。所有http请求增加token
@@ -42,7 +42,7 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   function(response) {
     // 用户信息是否超时，重定向到登录页面
-    console.log(response);
+    // console.log(response);
     // if (response.status != 200) {
     //   localStorage.clear();
     //   router.replace({
@@ -56,7 +56,7 @@ axios.interceptors.response.use(
     return response;
   },
   function(error) {
-    console.log("res error", error);
+    // console.log("res error", error);
     // Do something with response error
     store.commit("logout_delToken");
     router.replace({ name: "login" });
