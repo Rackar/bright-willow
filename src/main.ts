@@ -17,11 +17,19 @@ import axios from "axios";
 axios.defaults.baseURL =
   process.env.NODE_ENV === "production"
     ? "https://mingliu.codingyang.com/api/"
-    : "http://localhost:3006/";
+    : "https://mingliu.codingyang.com/api/";
 Vue.prototype.$imgServer =
   process.env.NODE_ENV === "production"
     ? "https://mingliu.codingyang.com/api/"
-    : "http://localhost:3006/";
+    : "https://mingliu.codingyang.com/api/";
+// axios.defaults.baseURL =
+//   process.env.NODE_ENV === "production"
+//     ? "https://mingliu.codingyang.com/api/"
+//     : "http://localhost:3006/";
+// Vue.prototype.$imgServer =
+//   process.env.NODE_ENV === "production"
+//     ? "https://mingliu.codingyang.com/api/"
+//     : "http://localhost:3006/";
 // var token = window.localStorage.getItem("token");
 //请求拦截。所有http请求增加token
 axios.interceptors.request.use(
@@ -30,7 +38,7 @@ axios.interceptors.request.use(
       "Content-Type": " application/json"
     };
     if (store.state.token) {
-      config.headers.Authorization = `${store.state.token}`;
+      config.headers.Authorization = `Bearer ${store.state.token}`;
     }
     // config.headers[] = localStorage.token;
     return config;
