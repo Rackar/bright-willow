@@ -13,6 +13,7 @@ import { Lazyload } from "vant";
 Vue.use(Vant);
 // Vue.use(Lazyload, lazyOption);
 Vue.use(Lazyload);
+
 import axios from "axios";
 axios.defaults.baseURL =
   process.env.NODE_ENV === "production"
