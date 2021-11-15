@@ -109,7 +109,34 @@ export default {
               type: "success",
               message: res.data.msg
             });
-            this.$router.push("/login");
+            // this.$router.push("/login");
+            this.$axios
+              .post("/noauth/login", {
+                mobile: this.form.tel,
+                pwd: this.form.password
+              })
+              .then(res => {
+                if (res.data.status == 1) {
+                  this.loading = false;
+
+                  console.log(res.data);
+
+                  this.$toast({
+                    duration: 1500,
+                    type: "success",
+                    message: res.data && res.data.msg
+                  });
+
+                  let token = res.data.data.token;
+
+                  this.$store.commit("login_saveToken", token);
+
+                  let previousUrl = "/home";
+                  if (this.$route.query && this.$route.query.redirect)
+                    previousUrl = this.$route.query.redirect;
+                  this.$router.push(previousUrl);
+                }
+              });
           } else {
             this.$toast.fail("手机号已注册");
           }

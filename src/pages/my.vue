@@ -72,10 +72,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.my {
-  div {
-    margin: 20px;
-  }
+<style scoped>
+.my div {
+  margin: 20px;
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="homepage">
     <div>
       <h2>明 柳</h2>
-      <div class="subtitle">死亡不是永别，忘记才是。</div>
+      <!-- <div class="subtitle">死亡不是永别，忘记才是。</div> -->
       <div class="subtitle">记念那些最珍贵的人</div>
 
       <div class="button-group" v-if="!logined">
@@ -54,29 +54,27 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style>
 .homepage {
   background-image: url("../assets/bg_home.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
-  // background-position-y: 100%;
-  // filter: blur(2px);
 
   background-color: aliceblue;
   height: 92vh;
-  h2 {
-    margin: 0 0 60px 0;
-    padding-top: 140px;
-    font-family: cursive;
-    font-size: xx-large;
-  }
-  .subtitle {
-    margin: 30px 0 0 0;
-    font-family: cursive;
-    font-size: x-large;
-  }
-  .button-group {
-    margin: 40px 0 0 0;
-  }
+}
+.homepage h2 {
+  margin: 0 0 60px 0;
+  padding-top: 140px;
+  font-family: cursive;
+  font-size: xx-large;
+}
+.homepage .subtitle {
+  margin: 30px 0 0 0;
+  font-family: cursive;
+  font-size: x-large;
+}
+.homepage .button-group {
+  margin: 40px 0 0 0;
 }
 </style>
